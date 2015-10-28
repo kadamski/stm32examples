@@ -16,6 +16,7 @@ Documentation:
  * DS9773 - STM32F030 Datasheet
  * RM0360 - STM32F030x4/6/8/C Reference Manual
  * AN4325 - Getting started with STM32F030xx hardware development
+ * Cortex™-M0 Devices Generic User Guide
 
 Examples:
 =========
@@ -23,3 +24,4 @@ Examples:
  * blinky0 - The simplest blinky project without external dependencies
  * blinky1 - Use STM32Cube header files for register adresses
  * blinky2 - Use STM32Cube header files and startup code and stdlib
+ * blinky3 - Use SysTick timer for delay
