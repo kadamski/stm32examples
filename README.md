@@ -22,3 +22,4 @@ Examples:
 
  * blinky0 - The simplest blinky project without external dependencies
  * blinky1 - Use STM32Cube header files for register adresses
+ * blinky2 - Use STM32Cube header files and startup code and stdlib
