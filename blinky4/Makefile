@@ -5,6 +5,8 @@ STUTILDIR ?= $(HOME)/BUILD/stlink/
 # http://openocd.org/
 OPENOCDDIR ?= $(HOME)/BUILD/openocd/
 OPENOCDCMD ?= $(OPENOCDDIR)/src/openocd -f $(OPENOCDDIR)/tcl/interface/stlink-v2.cfg -f $(OPENOCDDIR)/tcl/target/stm32f0x.cfg -s $(OPENOCDDIR)/tcl/
+# https://github.com/libopencm3/libopencm3
+LIBOPENCM3DIR ?= ../SHARED/libopencm3/
 
 TTYDEV ?= /dev/ttyUSB0
 SOC ?= STM32F0
@@ -14,8 +16,8 @@ CFLAGS  = -std=c99 -Wall -O2 -g
 CFLAGS += -mcpu=cortex-m0 -mthumb
 CFLAGS += -nostartfiles -ffreestanding
 
-CFLAGS += -Ilibopencm3/include
-CFLAGS += -Llibopencm3/lib
+CFLAGS += -I$(LIBOPENCM3DIR)/include
+CFLAGS += -L$(LIBOPENCM3DIR)/lib
 CFLAGS += -D$(SOC)
 
 LDFLAGS += -lopencm3_stm32f0
@@ -26,7 +28,7 @@ all: main.elf
 flash: flashstlink
 
 lib:
-	make -C libopencm3 >/dev/null
+	make -C $(LIBOPENCM3DIR)
 
 main.elf: main.c $(SRCS) | lib
 	$(PREFIX)-gcc $(CFLAGS) -o $@ -T stm32f030x6.ld $^ $(LDFLAGS)
