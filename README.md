@@ -26,3 +26,4 @@ Examples:
  * blinky2 - Use STM32Cube header files and startup code and stdlib
  * blinky3 - Use STM32Cube header files and SysTick timer for delay
  * blinky4 - Use libopencm3 for blinking
+ * uart1   - Use libopencm3 for simple UART tx
