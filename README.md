@@ -1,8 +1,8 @@
 STM32F030F4P6
--------------
+=============
 
 The board:
-==========
+----------
 
  * SWD port pins (RM0360 - 26.3.1, p. 709)
  * Boot pin (RM0360 - 2.5, p. 44)
@@ -11,7 +11,7 @@ The board:
  * LED at PA7
 
 Documentation:
-==============
+--------------
 
  * DS9773 - STM32F030 Datasheet
  * RM0360 - STM32F030x4/6/8/C Reference Manual
@@ -19,7 +19,7 @@ Documentation:
  * Cortex™-M0 Devices Generic User Guide
 
 Examples:
-=========
+---------
 
  * blinky0 - The simplest blinky project without external dependencies
  * blinky1 - Use STM32Cube header files for register adresses
