@@ -18,6 +18,7 @@ CFLAGS += -nostartfiles -ffreestanding
 
 CFLAGS += -I$(LIBOPENCM3DIR)/include
 CFLAGS += -L$(LIBOPENCM3DIR)/lib
+CFLAGS += -L$(LIBOPENCM3DIR)/../
 CFLAGS += -D$(SOC)
 
 LDFLAGS += -lopencm3_stm32f0
